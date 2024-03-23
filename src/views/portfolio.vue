@@ -5,15 +5,13 @@ import {ref} from 'vue';
 const __name="Portfolio"
 const name = ref("Alice Busiah ")
 const role = ref("Full-Stack Developer")
-const address =ref("Laerholzstraße 13b\n44801 Bochum")
 const email=ref("alicecodinglab@gmail.com")
 const website=ref("https://alicetemah.github.io/")
-const education=ref([{degree:"Abitur",school:'Gymnasium Nepomucenum',date:"2008-2016", link:undefined},{degree:"Bachelor of Science",school:'Universtät zu Köln', date:"2016-2022", link:undefined},{degree:"Nanodegree Self-Driving Car", school:"UDACITY inc. Mountain View California", date:"2021", link:'https://www.udacity.com/certificate/UA7TJJTT'},{
+const education=ref([{degree:"Abitur",school:'Gymnasium Nepomucenum',date:"2008-2016", link:undefined},{degree:"Bachelor of Science Information Systems",school:'Universtät zu Köln', date:"2016-2022", link:undefined},{degree:"Nanodegree Self-Driving Car", school:"UDACITY inc. Mountain View California", date:"2021", link:'https://www.udacity.com/certificate/UA7TJJTT'},{
   degree:"Master of Science Applied Computer Science", school:"Ruhr Universität Bochum", date:"2022-today", link:undefined}])
-const aboutme = ref("I love to build things. Especially digital products. Because of my passion for that I enjoy programming. For that reason I decided to continue my education in the field of Computer Science by choosing the Master of Applied Computer Science in Bochum.\nThe 'applied' part was very important for me since my bachelor studies in Information Systems focused more on the theoretical aspects of Computer Science.\nSince I have started my masters I could gain a lot of practical experience in the field of coding with mainly pyhon as it is the first choice for most of my artifical intelligence or data science related courses.But the main goal of my studies has always been to be capable of building digital products that people actually use. In the name of achievinng that I have found Web Development to be the way to go.")
 const portfolio= ref([
-  {name:"Table Tea Frontend",type:"Frontend",link:'https://tabletea.netlify.app/', description:"A Frontend Application for a Fullstack App that allows the users to create,upload or select tables and automatically create different types of charts with just a few clicks", stack:['vue','nuxt', 'tailwindcss', 
-  'daisyui','css', 'html'], deployment:"Netlify"},{name:"Table Tea Backend",type:"Backend",link:undefined,"description":"A Backend Application that acts as a REST API and serves data from a databse as requested from the client given that the client posseses adequate authentication and authorization", stack:['Express.js','MongoDB'] }, {name:'Portfolio',link:undefined, type:'Frontend',description:'A single page application that summarizes my profile as a Developer',stack:['vue', 'css'], deployment:'github'}
+  {name:"Table Tea Frontend",type:"Frontend",link:'https://tabletea.netlify.app/', description:"A Frontend Application for a Fullstack App that allows users to create,upload or select tables and automatically create different types of charts with just a few clicks", stack:['Vue.js','Nuxt', 'Tailwindcss', 
+  'Daisyui','CSS', 'HTML'], deployment:"Netlify"},{name:"Table Tea Backend",type:"Backend",link:'https://tabletea.netlify.app/login',"description":"A Backend Application that acts as a REST API and serves data from a databse as requested from the client given that the client posseses adequate authentication and authorization", stack:['Express.js','MongoDB'] }, {name:'Portfolio',link:'https://alicetemah.github.io/', type:'Frontend',description:'A single page application that summarizes my profile as a Developer',stack:['Vue.js', 'CSS'], deployment:'Github'}
 ])
 const skills =[{type:'Frontend',stack:['JavaScript', 'Typescript','Vue.js', 'Nuxt','HTML','CSS','Tailwindcss']}, {type:'Backend',stack:['Express.js','MongoDB']}, {type:'Version Control', stack:['Git', 'Github']}]
 
@@ -137,9 +135,11 @@ education.value = education.value.reverse()
     width: auto;
   }
   .profilepic{
-    border: 2px solid;
-    border-radius: 0.25rem;
-    place-self: center
+    place-self: center;
+    height:auto;
+    width: auto;
+    background-size: cover;
+
   }
 
 </style>
@@ -152,7 +152,8 @@ education.value = education.value.reverse()
       <h1 class="pageTitle">{{ role }}</h1>
     </div>         
     <div class="profilepic">
-      <img height="100%"width="auto" src="/profilepic.png"/>
+      <img height="100%
+      " width="auto" src="/profilepic.png"/>
     </div>
     <div>       
         <h1 class="pageTitle">{{ name }}</h1>
