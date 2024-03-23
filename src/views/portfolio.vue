@@ -1,4 +1,4 @@
-<script  lang="ts" setup>
+<script lang="ts" setup>
 import {ref} from 'vue';
 
 
@@ -15,7 +15,7 @@ const portfolio= ref([
 ])
 const skills =[{type:'Frontend',stack:['JavaScript', 'Typescript','Vue.js', 'Nuxt','HTML','CSS','Tailwindcss']}, {type:'Backend',stack:['Express.js','MongoDB']}, {type:'Version Control', stack:['Git', 'Github']}]
 
-const navigateTo=(link)=>{
+const navigateTo=(link:string)=>{
   
   window.location.href = link
 
